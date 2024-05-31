@@ -1,9 +1,5 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Fundamentals of Algorithms and Pseudocode
 
-| Title                                     | Type    | Duration | Author               |
-|-------------------------------------------|---------|----------|----------------------|
-| Fundamentals of Algorithms and Pseudocode | Lecture | 1:00     | Suresh Melvin Sigera |
-
 ## Introduction
 
 Welcome to "Fundamentals of Algorithms and Pseudocode" In this lesson, we will explore the foundational concepts of
