@@ -218,7 +218,7 @@ computer, which takes your instructions literally.
 ### Instructions:
 
 1. **Watch the Video**: Before you start writing your pseudocode, watch this video
-   on [How to make a peanut butter and jelly sandwich](https://www.youtube.com/watch?v=Ct-lOOUqmyY). Pay close attention
+   on [How to make a peanut butter and jelly sandwich](https://www.youtube.com/watch?v=4Z-RB81evsI). Pay close attention
    to each step involved in the process.
 
 2. **Initial Algorithm**: Write your first version of the pseudocode to make a peanut butter and jelly sandwich. List
