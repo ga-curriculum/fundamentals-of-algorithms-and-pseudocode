@@ -9,29 +9,31 @@
 CPU time and memory space are limited resources on a computer shared by multiple programs. Even before a single line of code is written, algorithms can give insights into how much space and how much CPU time will be needed when they are eventually translated into actual computer programmes. The more CPU time and memory space a program consumes, the more complex it is said to be. 
 
 ### Time complexity
-An algorithm's time complexity is the amount of time required to complete the execution. The time complexity is directly related to the number of algorithmic steps required to finish the execution. More the time complexity, more the number of CPU instructions and execution time.
+An algorithm's time complexity is directly related to the amount of time required to complete the execution as a function of it's input size. It is **the increase in the number of executed algorithmic steps** in relation to the increase in the number of input data units. More the time complexity is, more is the number of CPU instructions and execution time.
 
 ### Space complexity
-An algorithm's space complexity is the amount of memory units required by its data structures that are used during the algorithm's execution time. More the space complexity, the more memory space consumed by the program.
+An algorithm's space complexity is **the increase in the amount of auxiliary memory** (additional memory beyond the input size) in relation to the increase in the number of input data units. More the space complexity is, more is the memory consumed by the program.
 
 There can be multiple algorithms to solve a specific problem. However, a good algorithm is one that possesses the least time complexity and space complexity.
 
 ## The Big-O notation
-Big-O notation is one of the most fundamental tools for computer scientists to analyze the time complexity of an algorithm. It is a mathematical notation used to describe the asymptotic growth in the number of steps of an algorithm (time complexity) as its input grows infinitely large.
+Big-O notation is one of the most fundamental tools for computer scientists to analyze the complexity of an algorithm. It is a mathematical notation used to describe the asymptotic growth in the number of steps (time complexity) or amount of auxiliary memory (space complexity) of an algorithm as its input grows infinitely large.
 It is expressed using the algebraic expression **O\(f\(n\)\)** where:
-- "O" repreresents the phrase _Order of growth_.
+- "O" represents the phrase _Order of growth_.
 - "n" represents the number of inputs.
-- "f\(n\)" represents the order of growth of the time complexity of an algorithm in relation to it's number of inputs. 
+- "f\(n\)" represents the order of growth of an algorithm in relation to it's number of inputs. 
 
 In simple words, if we plot the number of data item inputs to an algorithm on x-axis and the number of executed steps for the algorithm on y-axis, then Big O notation represents the curve plotted for values from 0 to infinity on the x-axis. The steeper the curve climbs, the more the time complexity of the algorithm.
+
+Similarly, space complexity can also be expressed in Big O which will tell how memory usage of an algorithm increases relative to the size of its inputs.
 
 
 ## The eight orders of growth
 
-There are 8 possible algebraic orders of growth that can be represented by f\(n\).
+There are 8 possible algebraic orders of growth of time complexity and/or space complexity that can be represented by f\(n\).
 
-### 1. O\(1\) - Constant time complexity
-An algorithm is said to possess constant time complexity if the runtime is constant and does not depend on the size of the input.
+### 1. O\(1\) - Constant complexity
+An algorithm is said to possess constant time (or space) complexity if there no change in the number of steps executed (or the amount of space consumed), immaterial of an increase in the size of the input.
 #### **Pseudocode example**: Checking if the first element in an array is greater than a given number.
 ```plaintext
 FUNCTION isFirstElementGreater(array, value):
@@ -41,8 +43,8 @@ FUNCTION isFirstElementGreater(array, value):
         RETURN false
 ```
 
-### 2. O\(log n\) - Logarithmic time complexity
-An algorithm is said to possess logarithmic time complexity if the runtime grows logarithmically, often when the problem size is divided in each iteration.
+### 2. O\(log n\) - Logarithmic complexity
+An algorithm is said to possess logarithmic time (or space) complexity if the number of steps executed (or the amount of space consumed) by an algorithm for each additional input keeps reducing compared to its previous input. It often happens in looped algorithms when the problem size is reducing in each iteration.
 #### **Pseudocode example**: Counting the number of steps to repeatedly divide the array size by 2 until it reaches 1.
 ```plaintext
 FUNCTION countSteps(array):
@@ -56,8 +58,8 @@ FUNCTION countSteps(array):
     RETURN steps
 ```
 
-### 3. O\(n\) - Linear time complexity
-An algorithm is said to possess linear time complexity if the runtime grows proportionally with the input size.
+### 3. O\(n\) - Linear complexity
+An algorithm is said to possess linear time (or space) complexity if the number of steps executed (or the amount of space consumed) grows proportionally with the input size.
 #### **Pseudocode example**: Calculating the sum of all elements in an array.
 ```plaintext
 FUNCTION calculateSum(array):
@@ -68,8 +70,8 @@ FUNCTION calculateSum(array):
     RETURN sum
 ```
 
-### 4. O\(n log n\) - linearithmic time complexity
-An algorithm is said to possess linearithmic time complexity if the runtime grows faster than linear but slower than quadratic, often seen in divide-and-conquer approaches.
+### 4. O\(n log n\) - linearithmic complexity
+An algorithm is said to possess linearithmic time (or space) complexity if the number of steps executed (or the amount of space consumed) is more than linear but less than quadratic, often seen in divide-and-conquer approaches.
 #### **Pseudocode example**: A recursive algorithm that splits the array into two halves and performs linear operations on each half.
 ```plaintext
 FUNCTION processArray(array):
@@ -86,8 +88,8 @@ FUNCTION processArray(array):
     RETURN combineResults(left, right)
 ```
 
-### 5. O\(n^2\) - Quadratic time complexity
-An algorithm is said to possess quadratic time complexity if the runtime grows quadratically with the input size, typically due to nested loops.
+### 5. O\(n^2\) - Quadratic complexity
+An algorithm is said to possess quadratic time (or space) complexity if the number of steps executed (or the amount of space consumed) grows quadratically with the input size, typically due to nested loops.
 #### **Pseudocode example**: Comparing every pair of elements to find duplicates.
 ```plaintext
 FUNCTION findDuplicates(array):
@@ -97,8 +99,8 @@ FUNCTION findDuplicates(array):
                 PRINT ("Duplicate found:", array[i])
 ```
 
-### 6. O\(n^3\) - Cubic time complexity
-An algorithm is said to possess cubic time complexity if the runtime grows cubically, often due to three nested loops.
+### 6. O\(n^3\) - Cubic complexity
+An algorithm is said to possess cubic time (or space) complexity if the number of steps executed (or the amount of space consumed) grows cubically, often due to three levels of nested loops.
 #### **Pseudocode example**: Calculating the sum of all possible triplets of elements in the array.
 ```plaintext
 FUNCTION calculateTripletSum(array):
@@ -111,8 +113,8 @@ FUNCTION calculateTripletSum(array):
     RETURN sum
 ```
 
-### 7. O\(2^n\) - Exponential time complexity
-An algorithm is said to possess exponential time complexity if the runtime doubles with each additional input, typically seen in recursive algorithms that solve all subsets of the input.
+### 7. O\(2^n\) - Exponential complexity
+An algorithm is said to possess exponential time (or space) complexity if the number of steps executed (or the amount of space consumed) doubles with each additional input, typically seen in recursive algorithms that solve all subsets of the input.
 #### **Pseudocode example**: Generating all subsets of an array.
 ```plaintext
 FUNCTION generateSubsets(array, index = 0, current = []):
@@ -127,8 +129,8 @@ FUNCTION generateSubsets(array, index = 0, current = []):
     CALL generateSubsets(array, index + 1, current + [array[index]])
 ```
 
-### 8. O\(n!\) - Factorial time complexity
-An algorithm is said to possess factorial time complexity if the runtime grows factorially, usually seen in algorithms that generate all permutations.
+### 8. O\(n!\) - Factorial complexity
+An algorithm is said to possess factorial time (or space) complexity if the number of steps executed (or the amount of space consumed) grows factorially, usually seen in algorithms that generate all permutations.
 #### **Pseudocode example**: Generating all permutations of an array.
 ```plaintext
 FUNCTION generatePermutations(array, current = []):
@@ -142,6 +144,8 @@ FUNCTION generatePermutations(array, current = []):
 ```
 
 ## Ascertaining an algorithm's Big-O
+Lets look at how we can calculate the time complexity and express it in Big-O notation. (The process is the same for calculating space complexity too. The only difference is that we replace number of statement executions with the number of auxiliary-memory-consuming variables.)
+
 ### Step 1: Identify the dominant terms
 We have to examine the algorithm and identify the input data items that cause the maximum number of repetitive statement executions. These input data items are called the dominant terms. In our analysis, we should consider the input data items directly or indirectly used by looping control structures and nested loops.
 
@@ -164,18 +168,28 @@ We know that Big-O notation is not used to express the accurate numerical growth
 
 Upon simplifying `O(10n+10)` by removing constants and multipliers, we arrive at our final Big-O notation `O(n)`. This means our algorithm's time complexity is linear.
 
+## Trade-offs between time and space complexity
+There might often be a relationship between an algorithm's time complexity and space complexity. However, it varies depending on the problem and the algorithm design. 
 
+In many algorithms, there is a trade-off between time and space. Optimizing for one often involves increasing the other.
 
-## Closing reflections
-The lesser the time complexity of an algorithm, the better its performance will be when converted to code. Here is a table of Big-O notations arranged from least complex to most complex:
+While they may influence each other, choosing the best algorithm involves understanding these trade-offs in the context of the specific problem and constraints, such as available RAM or CPU speed of the machines or servers where the application will be installed and run.
+
+## Final reflections
+The lesser the time and space complexity of an algorithm, the better its performance will be when converted to code. Here is a table of Big-O notations arranged from the least complex to the most complex:
 
 |**Big O Notation**|**Growth nature**|
 |:---|:---|
-|O(1) - Constant time complexity|Constant. The least complex algorithms.|
-|O(log n) - Logarithmic time complexity|Grows slowly.|
-|O(n) - Linear time complexity|Grows proportionally.|
-|O(n log n) - Linearithmic time complexity|Grows faster than linear.|
-|O(n^2) - Quadratic time complexity|Grows quadratically(squared).|
-|O(n^3) - Cubic time complexity|Grows cubically.|
-|O(2^n) - Exponential time complexity|Grows exponentially.|
-|O(n!) - Factorial time complexity|Grows factorially. The most complex algorithms.|
+|O(1) - Constant complexity|Constant. The least complex algorithms.|
+|O(log n) - Logarithmic complexity|Grows slowly.|
+|O(n) - Linear complexity|Grows proportionally.|
+|O(n log n) - Linearithmic complexity|Grows faster than linear.|
+|O(n^2) - Quadratic complexity|Grows quadratically(squared).|
+|O(n^3) - Cubic complexity|Grows cubically.|
+|O(2^n) - Exponential complexity|Grows exponentially.|
+|O(n!) - Factorial complexity|Grows factorially. The most complex algorithms.|
+
+The process of choosing the best algorithm involves understanding the trade-offs between time complexity and space complexity.
+
+## Independent practice
+Calculate the time complexity and space complexity of the algorithm to check whether a number is an Armstrong number or not. Express it in Big O notation.

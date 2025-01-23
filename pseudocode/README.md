@@ -11,7 +11,7 @@ There are many ways of representing an algorithm. It may differ based on the aud
 **Pseudocode** is a non-executable textual representation of an algorithm meant for a technical audience with even beginner-level programming knowledge or expertise in any programming language. It is a "text-based" design tool for programmers used in software development to design and communicate algorithms in a language-agnostic way. It provides a structured way to plan solutions without worrying about the syntax of a specific programming language.
 
 #### Example:
-Here's a pseudocode representation of the Amstrong number checking algorithm.
+Here's a pseudocode representation of the Armstrong number checking algorithm.
 ```plaintext
 INPUT n 
 SET cubeSum = 0 and temp = n.

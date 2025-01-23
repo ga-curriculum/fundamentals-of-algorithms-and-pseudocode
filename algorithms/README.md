@@ -27,7 +27,7 @@ Such a descriptive algorithm must have three features:
 - **Effectiveness** - An algorithm must solve a problem by producing the necessary output(s) using a finite number of inputs.
 
 #### Example:
-Here's an example of an algorithm to find whether a number is Amstrong number or not. An Armstrong number is a number that is equal to the sum of cubes of its digits. For example, 153 is an Armstrong number because (1^3)+ (5^3)+(3^3) = 153.
+Here's an example of an algorithm to find whether a number is an Armstrong number or not. An Armstrong number is a number that is equal to the sum of the cubes of its digits. For example, 153 is an Armstrong number because (1^3)+ (5^3)+(3^3) = 153.
 ```plaintext
 Step 1: Initialize variable n to a random test number to check if it is Armstrong number.
 Step 2: Initialize variable cubeSum to 0.

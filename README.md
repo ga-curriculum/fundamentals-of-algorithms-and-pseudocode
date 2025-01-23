@@ -13,8 +13,8 @@ The concept of algorithmic problem-solving can be traced back to ancient times, 
 | ------ |:------------------:| ------ |
 | [Algorithms](./algorithms/README.md)                    | 15 min | Explain what an algorithm is.                |
 | [Pseudocode](./pseudocode/README.md) | 30 min | Express any algorithm using pseudocode.                |
-| [Big-O Notation](./big-o-notation/README.md) | 45 min | Ascertain the efficiency of an algorithm using Big-O notation.                |
-| **Total content**                                   | 1 hr 30 mins |                                     |
+| [Big-O Notation](./big-o-notation/README.md) | 1 hr 15 min | Ascertain the efficiency of an algorithm using Big-O notation.                |
+| **Total content**                                   | 2 hr |                                     |
 
 ## References
 
